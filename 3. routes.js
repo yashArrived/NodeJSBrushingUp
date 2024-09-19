@@ -27,7 +27,7 @@ app.get("a(bc)+d") //bc can be written any number of time , ex: abcbcbcbcbcd; ab
 //regix expression too :
 app.get(/.*fly$/) //it should always end with fly
 
-//this callback functions in app.get, post , use are called Controllers.
+//this callback functions in app.get, post , use are called route handler.
 
 //URl:  localhost/user?userID=101&pwd=test
 // to get those details : 
@@ -41,6 +41,8 @@ app.get("/user/:userId/:name" , (req,res)=>{
   console.log(req.params);
 })
 
+
+app.listen(3000 ,, ()=> {}) //app.listen is mandatory
 
 
 
