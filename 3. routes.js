@@ -42,7 +42,7 @@ app.get("/user/:userId/:name" , (req,res)=>{
 })
 
 
-app.listen(3000 ,, ()=> {}) //app.listen is mandatory
+app.listen(3000 ,, ()=> {}) //app.listen is mandatory. It basically runs on the passed port number.
 
 
 
