@@ -37,3 +37,19 @@
 
 //if we use next in the last route handler then it will throw an error as "Cannot set headers after they are sent to the client";
 //at the end of the route handler we should use res.send() or res.end() to send the response to the client.
+
+//Middlewares and request handlers :
+
+app.use("/",(req,res,next)=>{
+    console.log("Middleware 1");
+    next();
+});
+
+app.get("/users",(req,res)=>{    // request handler
+    console.log("Request handler 1");
+    res.send("Hello world");
+});
+
+// In the above code snippet, the middleware function is executed first and then the request handler is executed. The middleware function is executed first because the middleware function is defined before the request handler.
+//if we do res.send() in the middleware function then the request handler will not be executed.
+
