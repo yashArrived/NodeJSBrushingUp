@@ -1,5 +1,7 @@
+// Route Handlers are called Middleware functions in Express.js
+
 // If we did not send any response in a route handler then it will run into infinite loop.
-ex: app.use("/user" , (req,res)=>{
+ app.use("/user" , (req,res)=>{
     // only a console.log or any other statement but not res.send()
     }, () => {
     // second route handler
