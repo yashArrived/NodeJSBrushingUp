@@ -1,4 +1,4 @@
-// If we did not send any response in a route handler then it will run intoo infinite loop.
+// If we did not send any response in a route handler then it will run into infinite loop.
 ex: app.use("/user" , (req,res)=>{
     // only a console.log or any other statement but not res.send()
     }, () => {
@@ -28,3 +28,10 @@ ex: app.use("/user" , (req,res)=>{
 
     } 
 );
+
+// We cannot have multiple res.send() in a single route handler or in multiple route handlers for a single route.
+
+//if we have multiple res.send() in a single route handler then it will throw an error as "Cannot set headers after they are sent to the client"
+
+//if we use next in the last route handler then it will throw an error as "Cannot set headers after they are sent to the client";
+//at the end of the route handler we should use res.send() or res.end() to send the response to the client.
