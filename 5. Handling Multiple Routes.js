@@ -50,7 +50,7 @@ app.get("/users",(req,res)=>{    // request handler
     console.log("Request handler 1");
     res.send("Hello world");
 });
-
+// The function that sends response is called req handler
 // In the above code snippet, the middleware function is executed first and then the request handler is executed. The middleware function is executed first because the middleware function is defined before the request handler.
 //if we do res.send() in the middleware function then the request handler will not be executed.
 
