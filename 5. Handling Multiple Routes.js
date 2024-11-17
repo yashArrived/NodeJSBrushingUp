@@ -22,6 +22,7 @@
     
     (req,res,next)=>{
                 //the previous route handler has called next() so this will be executed
+             next();
 
     },
     
