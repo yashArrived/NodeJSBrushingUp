@@ -21,7 +21,7 @@ app.get('/hello/hisd');
 //the second one  will never get executed even you open /hello/hisd then also the first route will open.
 
 //We can also have different types,varieties of routes here : 
-app.get("/ab?c")  // b is optional , /abc and /ab will point to same route.
+app.get("/ab?c")  // b is optional , /abc and /ac will point to same route.
 app.get("/ab*cd") //any expression can be written betweem ab and cd , the route should always start with ab and end with cd , ex : abYashcd;
 app.get("a(bc)+d") //bc can be written any number of time , ex: abcbcbcbcbcd; abcd; abcbcd;
 //regix expression too :
